@@ -1,0 +1,12 @@
+package com.codegnan.app.usermanagement.repository;
+
+import com.codegnan.app.usermanagement.entity.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.Optional;
+
+public interface UserRepository extends JpaRepository<User, Long> {
+    boolean existsByUsername(String username);
+    boolean existsByUsernameAndIdNot(String username, Long id);
+    Optional<User> findByUsername(String username);
+}
