@@ -26,7 +26,7 @@ A Spring Boot user management application with a browser interface and REST API.
 1. Create the database in MySQL:
 
    ```sql
-   CREATE DATABASE user_management_api_clean;
+   CREATE DATABASE user_management_api;
    ```
 
 2. Open the project folder containing `pom.xml` in IntelliJ IDEA. Use JDK 17 or newer and wait for Maven to load.
@@ -49,7 +49,7 @@ A Spring Boot user management application with a browser interface and REST API.
 Registration creates a USER account. To grant ADMIN access to your own local account, run this in MySQL Workbench after registering:
 
 ```sql
-UPDATE user_management_api_clean.users
+UPDATE user_management_api.users
 SET user_role = 'ADMIN'
 WHERE username = 'your-email@example.com';
 ```
